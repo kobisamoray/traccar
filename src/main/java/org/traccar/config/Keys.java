@@ -730,6 +730,14 @@ public final class Keys {
             Collections.singletonList(KeyType.GLOBAL));
 
     /**
+     * Trips less than minimal duration and minimal distance are ignored. 300 seconds and 500 meters are default.
+     */
+    public static final ConfigKey<Long> NOTIFICATOR_TELEGRAM_CACHE_RETENTION = new ConfigKey<>(
+            "notificator.telegram.cacheRetention",
+            Collections.singletonList(KeyType.GLOBAL),
+            0L);
+
+    /**
      * Maximum time period for reports in seconds. Can be useful to prevent users to request unreasonably long reports.
      * By default there is no limit.
      */
